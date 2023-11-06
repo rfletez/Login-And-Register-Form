@@ -1,10 +1,9 @@
 package com.login.UserLogin.service;
 
-import org.springframework.core.log.LogMessage;
-
 
 import com.login.UserLogin.dto.EmployeeDTO;
 import com.login.UserLogin.dto.LoginDTO;
+import com.login.UserLogin.response.LoginMessage;
 
 public interface EmployeeService {
 
@@ -12,5 +11,4 @@ public interface EmployeeService {
 
 	LoginMessage loginEmployee(LoginDTO loginDTO);
 	
-
 }
