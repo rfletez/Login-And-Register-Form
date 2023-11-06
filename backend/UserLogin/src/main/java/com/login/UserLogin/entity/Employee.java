@@ -2,6 +2,8 @@ package com.login.UserLogin.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -11,6 +13,7 @@ public class Employee {
 	
 	@Id
 	@Column(name = "employee_id", length = 50)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long employeeID;
 	
 	@Column(name = "employee_name", length = 250)
