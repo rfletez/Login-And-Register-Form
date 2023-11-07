@@ -1,6 +1,27 @@
+import { useState } from 'react';
+import { axios } from 'axios';
+
 function Register() {
 
-    
+    const [employeeName, setEmployeeName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    async function save(event) {
+        event.preventDefault();
+
+        try {
+            await axios.post("http://localhost:8101/api/v1/com/employeePath/save", {
+                employeeName: employeeName,
+                email: email,
+                password: password
+            });
+            alert("Employee registration successful");
+        }
+        catch(err) {
+            alert(err);
+        }
+    }
 
     return (
         <div>
